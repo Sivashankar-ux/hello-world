@@ -1,8 +1,9 @@
-name: Run Every 2 Minutes wirh Greetings
+name: Run Every 2 Minutes with Greetings
 
 on: 
   schedule: 
     - cron: "*/2 * * * *"
+  workflow_dispatch:
 jobs:
   greet-job:
     runs-on: ubuntu-latest
