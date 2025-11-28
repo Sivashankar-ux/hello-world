@@ -1,0 +1,15 @@
+name: Run Every 2 Minutes wirh Greetings
+
+on: 
+  schedule: 
+    - cron: "*/2 * * * *"
+jobs:
+  greet-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Greeting Message
+        run: |
+          echo "Hello, Its me running for every for 2 minutes..."
+      
